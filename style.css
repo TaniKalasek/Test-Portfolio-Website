@@ -1,0 +1,259 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+  height: 100%;
+}
+:root{
+  --viridian: #488d7e;
+  --blackcurrant: #2f2635;
+  --pickled-bluewood: #354f61;
+  --monte-carlo: #76c8ca;
+  --shamrock: #4fd6a0;
+  --persian-red: #d13737;
+  --bgcolor-one: #E3E3E3;
+  
+  --font-h: "Playfair Display", serif;
+  --font-p: "Source Sans 3", sans-serif;
+}
+body{
+  font-family: var(--font-p);
+  line-height: 1.5;
+  color: var(--blackcurrant);
+  background-color: var(--bgcolor-one);
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;/*use for menu positition - fixed!*/
+  min-width: 960px;
+}
+h1,
+h2,
+h3{
+  padding: 8px 0;
+  font-family: var(--font-h);
+  color: var(--pickled-bluewood);
+}
+p{
+  font-size: 16px;
+}
+a{
+  text-decoration: none;
+  color: var(--viridian);
+}
+ol,
+ul{
+  list-style: none;
+}
+main{
+  flex-grow: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+article{
+  padding: 20px;
+  /*border-bottom: 2px solid var(--pickled-bluewood);*/
+}
+article h1{
+  border-bottom: 3px solid var(--shamrock);
+  max-width: max-content;
+  margin-bottom: 10px;
+  display: inline;
+  padding-bottom: 5px;
+}
+.article-header{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Vycentruje nadpis s ikonou */
+  gap: 10px;
+ padding: 0 20px;
+}
+/* Nové Flexbox styly pro sekci O mně */
+.about-content {
+  display: flex;
+  gap: 30px; /* Mezera mezi textem a obrázkem */
+  align-items: flex-start; /* Zarovná text a obrázek nahoře */
+  padding: 20px 0;
+}
+
+.about-text {
+  flex: 3; /* Text zabere 3/4 prostoru */
+}
+
+.about-image {
+  flex: 1; /* Obrázek zabere 1/4 prostoru */
+  text-align: right;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+.btn_tab {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--blackcurrant);
+  background-color: var(--monte-carlo);
+  padding: 5px 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.btn_tab:hover {
+  color: var(--bgcolor-one);
+  background-color: var(--viridian);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus-visible: only shows when using keyboard (not mouse) */
+.btn_tab:focus-visible {
+  outline: 3px solid var(--viridian);
+  outline-offset: 4px;
+}
+#btng{
+  margin-right: 15px;
+}
+/*-------------------------------------------------------------------------------------------------------*/
+.menu-header{
+  height: 100px;
+  width: 100%;
+  background-color: var(--pickled-bluewood);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.menu-header a{
+  color: var(--bgcolor-one);
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+.menu-header a:hover,
+.active a{
+  border-bottom: 3px solid var(--persian-red);
+  transform: translateY(-3px);
+  color: var(--monte-carlo);
+}
+#logo{
+  max-width: 120px;
+  flex-direction: column;
+  justify-content: center;
+}
+nav ul{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav ul li{
+  padding: 0 25px;
+  margin: 0 5px;
+  font-size: 1.3rem;
+  line-height: 3rem;
+}
+
+footer{
+  box-sizing: border-box;
+  text-align: center;
+  height: 100px;
+  color: var(--bgcolor-one);
+  background-color: var(--pickled-bluewood);
+  padding: 50px 0 50px 0;
+  clip-path: polygon(0 30px, 100% 0, 100% 105%, 0 105%);
+}
+
+.left{
+  padding: 0;
+}
+.mail{
+  font-size: 18px;
+}
+/* Styly pro zarovnání ikony a textu vedle sebe */
+.contact-intro {
+    display: flex; 
+    align-items: center; /* Vertikální zarovnání ikony a textu na střed */
+    gap: 15px; /* Mezera mezi ikonou a textem */
+    padding: 20px;
+    
+    /* Centrování celého bloku na stránce (pokud to <main> sám nezařídí) */
+    justify-content: center;
+}
+/* Centrování iframe formuláře */
+.contact-form {
+    padding-top: 20px;
+    text-align: center; /* Centruje formulář uvnitř bloku */
+}
+.center{
+  text-align: center;
+}
+/*-------------------------------------------------------------------------------------------------------*/
+/* 2. Nové styly Flexbox kontejneru */
+.skills-flex {
+    display: flex; /* Zapne Flexbox pro rozložení */
+    gap: 20px;     /* Mezera mezi jednotlivými položkami */
+    padding: 20px 0;
+}
+
+/* 3. Styly pro jednotlivé položky */
+.skill-item {
+    /* Zajištění stejné šířky pro všechny 3 prvky */
+    flex-basis: 33.33%; 
+    
+    /* Nahrazuje border-collapse a vertical-align: top */
+    border: 1px solid var(--shamrock); 
+    padding: 10px;
+    
+    /* Centruje obsah v rámci položky */
+    text-align: center; 
+}
+
+/* 4. Oprava zarovnání textu, aby se text necentroval, ale zarovnával doleva */
+.skill-item h2,
+.skill-item h3,
+.skill-item p {
+    text-align: left;
+    padding: 0 0 5px 0; /* Odstraní původní padding z h1, h2, h3 globálního selektoru */
+}
+/*---------------------------------------------------------------------------------------------*/
+#projects{
+  display: flex;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Zarovnáme na začátek */
+  gap: 15px;             /* Menší mezera (např. 15px) */
+}
+#projects a{
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(25% - 12px);/* Pro 4 položky: 100% / 4 = 25%. Odečteme malou část pro mezery.Ponecháme malý prostor pro mezery gap: 15px */
+  margin: 0;
+  text-align: center;
+}
+#projects a img{
+  border: 2px solid var(--shamrock);
+  padding: 6px;
+  box-shadow: 3px 3px 6px var(--blackcurrant);
+  /* Aby se miniatura nepřetáhla na 25% šířky položky */
+  width: auto;
+  /* Ponechte, aby se obrázek nedostal mimo <a> kontejner */
+  max-width: 100%; 
+  height: auto;
+}
+
+.skill-set-list{
+  list-style: circle;
+}
+

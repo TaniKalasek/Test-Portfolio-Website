@@ -1,0 +1,24 @@
+<div class="skills-flex">
+  
+  <div class="skill-item">
+    <img src="/media/icons8-html-50.png" alt="Ikonka HTML">
+    <h2>HTML</h2>
+    <h3>HyperText Markup Language</h3>
+    <p>HTML je základní kostra každé webové stránky...</p>
+  </div>
+  
+  <div class="skill-item">
+    <img src="/media/icons8-css-50-2.png" alt="Ikonka CSS">
+    <h2>CSS</h2>
+    <h3>Cascading Style Sheets</h3>
+    <p>CSS je jazyk, který se stará o vzhled...</p>
+  </div>
+  
+  <div class="skill-item">
+    <img src="/media/icons8-javascript-50.png" alt="Ikonka JavaScript">
+    <h2>JavaScript</h2>
+    <h3>JS</h3>
+    <p>JavaScript dodává webovým stránkám interaktivitu...</p>
+  </div>
+
+</div>
